@@ -8,7 +8,6 @@ import { appWithTranslation, SSRConfig } from 'next-i18next';
 import { useEffect, useState } from 'react';
 import '@contentful/live-preview/style.css';
 
-import { Settings } from '@src/components/features/settings';
 import { Layout } from '@src/components/templates/layout/layout';
 import { useContentfulContext, ContentfulContentProvider } from '@src/contentful-context';
 import { queryConfig } from '@src/lib/gql-client';
@@ -74,7 +73,6 @@ const CustomApp = ({
               <Hydrate state={dehydratedState}>
                 <Layout preview={previewActive}>
                   <Component {...pageProps} err={err} />
-                  <Settings />
                 </Layout>
               </Hydrate>
             </ThemeProvider>
