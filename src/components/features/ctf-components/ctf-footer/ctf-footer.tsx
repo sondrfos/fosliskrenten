@@ -16,7 +16,6 @@ import {
 import { LanguageSelector } from '@src/components/features/language-selector';
 import { Link } from '@src/components/shared/link';
 import { useContentfulContext } from '@src/contentful-context';
-import Logo from '@src/icons/logo-tagline.svg';
 import { CONTAINER_WIDTH } from '@src/theme';
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -254,61 +253,9 @@ export const CtfFooter = (props: FooterFieldsFragment) => {
 
   return (
     <>
-      <Container
-        maxWidth={false}
-        className={classes.footerContainer}
-        {...ContentfulLivePreview.getProps({
-          entryId: footerContent?.sys?.id,
-          fieldId: 'menuItems',
-          locale,
-        })}
-      >
-        <footer className={classes.footer}>
-          {footerContent?.menuItemsCollection?.items?.length && (
-            <nav role="navigation" className={classes.menuWrapper}>
-              {footerContent.menuItemsCollection.items.map(
-                menuItem =>
-                  menuItem && (
-                    <div key={menuItem.sys.id} className={classes.menuColumn}>
-                      <ul className={classes.menu}>
-                        <li>
-                          <p
-                            className={classes.menuItem}
-                            {...ContentfulLivePreview.getProps({
-                              entryId: menuItem.sys.id,
-                              fieldId: 'groupName',
-                              locale,
-                            })}
-                          >
-                            {menuItem.groupName}
-                          </p>
-                          {menuItem.featuredPagesCollection && (
-                            <ul className={classes.submenu}>
-                              {renderMenuGroupLinks(
-                                menuItem.featuredPagesCollection,
-                                classes.submenuItem,
-                              )}
-                            </ul>
-                          )}
-                        </li>
-                      </ul>
-                    </div>
-                  ),
-              )}
-            </nav>
-          )}
-          <section className={classes.footerEndSection}>
-            <LanguageSelector />
-          </section>
-        </footer>
-      </Container>
       <Container maxWidth={false} className={classes.footerCorporateContainer}>
         <section className={classes.footerCorporate}>
           <div className={classes.corporateLogoMenu}>
-            <div className={classes.corporateLogoContainer}>
-              <Logo className={classes.corporateLogo} />
-            </div>
-
             <section className={classes.copyrightAndLegal}>
               <p className={classes.copyright}>
                 {t('legal.copyright', { year: new Date().getFullYear() })}

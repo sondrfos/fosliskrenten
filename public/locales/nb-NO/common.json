@@ -1,19 +1,19 @@
 {
   "common": {
-    "homepage": "Homepage",
+    "homepage": "Hjemmeside",
     "logoImageAltText": "Logo"
   },
   "price": {
-    "free": "Free"
+    "free": "Gratis"
   },
   "navigation": {
-    "mobileMenuButton": "Open menu"
+    "mobileMenuButton": "Åpne meny"
   },
   "time": {
-    "month": "Month"
+    "month": "Måned"
   },
   "socials": {
-    "findUsOn": "Find us on",
+    "findUsOn": "Følg oss gjerne på",
     "twitter": "Twitter",
     "facebook": "Facebook",
     "linkedin": "LinkedIn",
