@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 interface LayoutPropsInterface {
   preview: boolean;
-  children: ReactElement[];
+  children: ReactElement;
 }
 
 export const Layout: React.FC<LayoutPropsInterface> = ({ children }) => {

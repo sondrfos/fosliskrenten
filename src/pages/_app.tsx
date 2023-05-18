@@ -83,4 +83,5 @@ const CustomApp = ({
   );
 };
 
+// @ts-ignore
 export default appWithTranslation(CustomApp, nextI18nConfig);
