@@ -120,7 +120,7 @@ export const CtfNavigation = (props: NavigationFieldsFragment) => {
                     ) : (
                       <Link href={`/${menuItem.link.slug}`}>{menuItem.groupName}</Link>
                     )}
-                    {menuItem.children && (
+                    {menuItem.children && menuItem.children?.items.length > 0 && (
                       <ul className={classes.submenu}>
                         {renderNavigationLinks(menuItem.children, classes.submenuItem)}
                       </ul>
